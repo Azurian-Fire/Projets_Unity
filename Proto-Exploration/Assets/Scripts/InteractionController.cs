@@ -33,11 +33,12 @@ public class InteractionController : MonoBehaviour
 
     void UpdateCurrentInteractable()
     {
+        //TODO seulement on change plutot que par frame
         Ray ray = new Ray(playerTransform.position, playerTransform.forward);
         Physics.Raycast(ray, out RaycastHit hitInfo, interactDistance);
 
         currentInteractable = hitInfo.collider?.GetComponent<IInteractable>();
-        Debug.Log(currentInteractable);
+        //Debug.Log(currentInteractable);
     }
 
     void UpdateInteractText()
