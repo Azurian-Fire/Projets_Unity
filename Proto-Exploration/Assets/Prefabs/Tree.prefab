@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5264323186403168869}
   - component: {fileID: 6177867194490471718}
   - component: {fileID: 489824514027057126}
-  - component: {fileID: 8773294294187709986}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -49,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitPrefab: {fileID: 1734507326562128720, guid: b7f001faf05f0c840a0e88505e4ccdc7, type: 3}
+  spawnData: {fileID: 11400000, guid: 30ed72d69f61804429dc459dd9b9a24b, type: 2}
+  effect: 0
   message: Press E to spawn fruit
 --- !u!65 &489824514027057126
 BoxCollider:
@@ -71,24 +72,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 5.9982896, z: 1}
   m_Center: {x: 0, y: -0.019089937, z: 0}
---- !u!114 &8773294294187709986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6586677943750444136}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cda1f3f51ad1424786cbce4a60b8590, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colors:
-  - {r: 0.59568727, g: 0.07947847, b: 0.07947847, a: 0}
-  - {r: 0.17543952, g: 0.59607846, b: 0.07843136, a: 0}
-  - {r: 0.07843136, g: 0.431819, b: 0.59607846, a: 0}
-  childMaterials: []
-  chosenColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7111191616585613474
 GameObject:
   m_ObjectHideFlags: 0

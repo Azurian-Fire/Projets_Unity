@@ -15,7 +15,7 @@ public class FruitEffects : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        childMaterials = new Material[transform.childCount * 2];
+        childMaterials = new Material[transform.childCount];
         colorEffectDict = new Dictionary<Color, int>();
 
         // Assign random value effect to each color
@@ -33,8 +33,8 @@ public class FruitEffects : MonoBehaviour
             chosenColor = colors[Random.Range(0, colors.Length)];
 
             // Apply the color each child of the child
-            childMaterials[i] = transform.GetChild(i).GetChild(0).GetComponent<Renderer>().material;
-            childMaterials[i].color = chosenColor;
+            //childMaterials[i] = transform.GetChild(i).GetChild(0).GetComponent<Renderer>().material;
+            //childMaterials[i].color = chosenColor;
 
             childMaterials[i] = transform.GetChild(i).GetChild(1).GetComponent<Renderer>().material;
             childMaterials[i].color = chosenColor;

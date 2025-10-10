@@ -3,7 +3,8 @@ using UnityEngine;
 public class FruitSpawn : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject fruitPrefab;
-
+    [SerializeField] FruitSpawnData spawnData;
+    Color fittingColor;
     public float effect;
 
     public string interactMessage => message;
@@ -16,6 +17,17 @@ public class FruitSpawn : MonoBehaviour, IInteractable
 
     void Spawn()
     {
-        GameObject fruit = Instantiate(fruitPrefab, transform.position + Vector3.up, Quaternion.identity, transform);
+        Vector2 randomOffset = Random.insideUnitCircle * spawnData.randomSpawnRadius;
+        Vector3 randomStartingPos = new Vector3(transform.position.x + randomOffset.x, transform.position.y + spawnData.verticalOffset, transform.position.z + randomOffset.y);
+        GameObject fruit = Instantiate(fruitPrefab, randomStartingPos, Quaternion.identity);
+        fruit.transform.GetChild(0).GetComponent<Renderer>().material.color = GetFittingColor();
+        Rigidbody fruitRb = fruit.GetComponent<Rigidbody>();
+        fruitRb.AddTorque(randomStartingPos.normalized * spawnData.randomThrowStrength, ForceMode.Impulse);
+    }
+
+    Color GetFittingColor()
+    {
+        Color currentTreeColor = transform.GetChild(1).GetComponent<Renderer>().material.color;
+        return currentTreeColor;
     }
 }

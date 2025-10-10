@@ -6,7 +6,7 @@ public class TreeColouring : MonoBehaviour
     [SerializeField] Color[] colors;
     public Material[] childMaterials;
     [SerializeField] Color chosenColor;
-
+    public int chosenEffectId;
     public static Dictionary<Color, int> colorEffectDict;
 
     // if value = 1, fruit is good
@@ -32,6 +32,7 @@ public class TreeColouring : MonoBehaviour
         for (int i = 0; i < colors.Length; i++)
         {
             colorEffectDict.Add(colors[i], Random.Range(1, 2));
+
             Debug.Log($"Color: {colors[i]}, Effect: {colorEffectDict[colors[i]]}");
         }
     }
