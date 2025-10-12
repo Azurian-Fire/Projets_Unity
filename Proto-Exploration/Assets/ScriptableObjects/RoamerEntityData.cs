@@ -13,8 +13,11 @@ public class RoamerEntityData : ScriptableObject
     public float roamingMovementSpeed;
     public float averageRoamingDuration;
     public float roamingDurationDelta;
-    [Header("Aggro Settings")]
+    [Header("Chase Settings")]
     public float chaseMovementSpeed;
+    public float chaseScanIntervalTimer;
+    public float chaseOffsetRadius;
+    [Header("Aggro Settings")]
     public float aggroRangeRadius;
     public float deaggroTime;
 }

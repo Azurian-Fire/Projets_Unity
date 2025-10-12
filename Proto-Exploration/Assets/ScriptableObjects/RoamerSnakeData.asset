@@ -20,5 +20,7 @@ MonoBehaviour:
   averageRoamingDuration: 3
   roamingDurationDelta: 0.1
   chaseMovementSpeed: 2
+  chaseScanIntervalTimer: 0.5
+  chaseOffsetRadius: 1
   aggroRangeRadius: 10
   deaggroTime: 3

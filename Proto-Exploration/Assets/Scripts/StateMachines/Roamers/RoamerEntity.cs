@@ -11,14 +11,17 @@ public class RoamerEntity : MonoBehaviour
     protected Rigidbody rb;
     protected RoamerStateMachine stateMachine;
     protected NavMeshAgent agent;
+    protected SphereCollider aggroCollider;
 
     protected virtual void Awake()
     {
         stateMachine = GetComponent<RoamerStateMachine>();
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
+        aggroCollider = GetComponent<SphereCollider>();
         stateMachine.Initialize();
         SetMovementSpeed(entityData.roamingMovementSpeed);
+        aggroCollider.radius = entityData.aggroRangeRadius;
     }
 
     protected virtual void Update()
@@ -35,5 +38,22 @@ public class RoamerEntity : MonoBehaviour
     public void SetMovementSpeed(float movementSpeed)
     {
         agent.speed = movementSpeed;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
+        target = other.transform;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
+        target = null;
     }
 }

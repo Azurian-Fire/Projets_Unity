@@ -17,7 +17,8 @@ public class IdleState : BasicRoamerState
     public override void Enter()
     {
         currentIdleDuration = GetFittingRandomDuration(idleDuration, idleDurationDelta);
-        //roamerEntity.SetMovementSpeed(roamerEntity.entityData.roamingMovementSpeed);
+        roamerAgent.isStopped = true;
+        roamerAgent.ResetPath();
         idleTimer = 0f;
         Debug.Log($"{roamerEntity.name} enters Idle with a duration of {currentIdleDuration}");
     }
