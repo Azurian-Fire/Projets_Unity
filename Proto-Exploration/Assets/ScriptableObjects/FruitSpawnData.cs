@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "FruitSpawnData", menuName = "Scriptable Objects/FruitSpawnData")]
 public class FruitSpawnData : ScriptableObject
 {
     public float randomSpawnRadius;

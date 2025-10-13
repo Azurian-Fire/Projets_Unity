@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "RoamerEntityData", menuName = "Scriptable Objects/RoamerEntityData")]
 public class RoamerEntityData : ScriptableObject
 {
     [Header("Stress Settings")]

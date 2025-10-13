@@ -8,6 +8,7 @@ public class InteractionController : MonoBehaviour
 
     [SerializeField] Transform playerTransform;
 
+
     [SerializeField] TextMeshProUGUI interactText;
     [SerializeField] float interactDistance = 5f;
 

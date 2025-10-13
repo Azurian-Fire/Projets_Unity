@@ -5,7 +5,7 @@ public class FruitSpawn : MonoBehaviour, IInteractable
     [SerializeField] GameObject fruitPrefab;
     [SerializeField] FruitSpawnData spawnData;
     Color fittingColor;
-    public float effect;
+    public int effect;
 
     public string interactMessage => message;
     [SerializeField] string message = "Press E to spawn fruit";
@@ -22,6 +22,7 @@ public class FruitSpawn : MonoBehaviour, IInteractable
         GameObject fruit = Instantiate(fruitPrefab, randomStartingPos, Quaternion.identity);
         fruit.transform.GetChild(0).GetComponent<Renderer>().material.color = GetFittingColor();
         Rigidbody fruitRb = fruit.GetComponent<Rigidbody>();
+        fruit.GetComponent<FruitEffect>().stressEffect = effect;
         fruitRb.AddTorque(randomStartingPos.normalized * spawnData.randomThrowStrength, ForceMode.Impulse);
     }
 

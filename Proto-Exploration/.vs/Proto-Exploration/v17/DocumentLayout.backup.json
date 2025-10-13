@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\statemachines\\roamers\\roamerentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachines\\roamers\\roamerentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|f:\\ican\\3gd\\poule_trauma_proto\\proto-exploration\\assets\\scripts\\consumablehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\consumablehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|f:\\ican\\3gd\\poule_trauma_proto\\proto-exploration\\assets\\scripts\\statemachines\\roamers\\roamingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachines\\roamers\\roamingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\fruitspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fruitspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|f:\\ican\\3gd\\poule_trauma_proto\\proto-exploration\\assets\\scriptableobjects\\roamerentitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptableobjects\\roamerentitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scriptableobjects\\fruitspawndata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptableobjects\\fruitspawndata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\statemachines\\roamers\\chasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachines\\roamers\\chasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\statemachines\\roamers\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachines\\roamers\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|f:\\ican\\3gd\\poule_trauma_proto\\proto-exploration\\assets\\scripts\\statemachines\\roamers\\roamerentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachines\\roamers\\roamerentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\statemachines\\roamers\\roamingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachines\\roamers\\roamingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\statemachines\\roamers\\roamerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,10 +51,6 @@
       "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\iinteractable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\fruitspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fruitspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\interactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,18 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scriptableobjects\\fruitspawndata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptableobjects\\fruitspawndata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\fruiteffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fruiteffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE86A28E-A643-09EB-ED71-3EA0127E1BEE}|Assembly-CSharp.csproj|F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\assets\\scripts\\healthbarui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,76 +74,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RoamingState.cs",
-              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
-              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
-              "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T13:50:59.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IdleState.cs",
-              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
-              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
-              "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T13:47:42.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "RoamerStateMachine.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamerStateMachine.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\RoamerStateMachine.cs",
               "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamerStateMachine.cs",
               "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\RoamerStateMachine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-10T13:44:15.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RoamerEntity.cs",
-              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
-              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
-              "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T13:42:23.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "BasicRoamerState.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\BasicRoamerState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\BasicRoamerState.cs",
               "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\BasicRoamerState.cs",
               "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\BasicRoamerState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-10T13:41:23.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IdleState.cs",
+              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
+              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\IdleState.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T13:47:42.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "RoamingState.cs",
+              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
+              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\RoamingState.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T13:50:59.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChaseState.cs",
+              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\ChaseState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\ChaseState.cs",
+              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\ChaseState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\ChaseState.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T13:53:41.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoamerEntityData.cs",
+              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\ScriptableObjects\\RoamerEntityData.cs",
+              "RelativeDocumentMoniker": "Assets\\ScriptableObjects\\RoamerEntityData.cs",
+              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\ScriptableObjects\\RoamerEntityData.cs",
+              "RelativeToolTip": "Assets\\ScriptableObjects\\RoamerEntityData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T16:08:00.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoamerEntity.cs",
+              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
+              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StateMachines\\Roamers\\RoamerEntity.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T13:42:23.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PlayerControls.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\PlayerControls.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControls.cs",
@@ -147,31 +181,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "FruitSpawnData.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\ScriptableObjects\\FruitSpawnData.cs",
               "RelativeDocumentMoniker": "Assets\\ScriptableObjects\\FruitSpawnData.cs",
               "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\ScriptableObjects\\FruitSpawnData.cs",
               "RelativeToolTip": "Assets\\ScriptableObjects\\FruitSpawnData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T08:58:20.568Z"
+              "WhenOpened": "2025-10-10T08:58:20.568Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FruitEffects.cs",
-              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\FruitEffects.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FruitEffects.cs",
-              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\FruitEffects.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FruitEffects.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAMAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ConsumableHandler.cs",
+              "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\ConsumableHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ConsumableHandler.cs",
+              "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\ConsumableHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ConsumableHandler.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwAMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T10:57:08.19Z"
+              "WhenOpened": "2025-10-06T10:57:08.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "FruitSpawn.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\FruitSpawn.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FruitSpawn.cs",
@@ -179,11 +215,12 @@
               "RelativeToolTip": "Assets\\Scripts\\FruitSpawn.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T09:08:29.817Z"
+              "WhenOpened": "2025-10-06T09:08:29.817Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "HealthBarUI.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\HealthBarUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HealthBarUI.cs",
@@ -195,19 +232,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 2,
               "Title": "Player.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T10:13:48.081Z"
+              "WhenOpened": "2025-10-06T10:13:48.081Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "InteractionController.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\InteractionController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InteractionController.cs",
@@ -219,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "IInteractable.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\IInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\IInteractable.cs",
@@ -231,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "F:\\ICAN\\3GD\\Poule_Trauma_Proto\\Proto-Exploration\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",

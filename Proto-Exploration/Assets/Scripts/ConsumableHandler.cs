@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FruitEffects : MonoBehaviour
+public class ConsumableHandler : MonoBehaviour
 {
     [SerializeField] Color[] colors;
     public Material[] childMaterials;
     [SerializeField] Color chosenColor;
 
-    public static Dictionary<Color, int> colorEffectDict;
+    public static Dictionary<Color, bool> colorEffectDict;
 
+    [SerializeField] int fruitStressValue;
     // if value = 1, fruit is good
     //if value = 2, fruit is bad
 
@@ -16,14 +17,13 @@ public class FruitEffects : MonoBehaviour
     void Start()
     {
         childMaterials = new Material[transform.childCount];
-        colorEffectDict = new Dictionary<Color, int>();
+        colorEffectDict = new Dictionary<Color, bool>();
 
         // Assign random value effect to each color
         for (int i = 0; i < colors.Length; i++)
         {
-            int effectValue = Random.Range(1, 3);
+            bool effectValue = Random.value < 0.5f;
             colorEffectDict.Add(colors[i], effectValue);
-            Debug.Log($"Color: {colors[i]}, Effect: {effectValue}");
         }
 
         // Apply the color to all children
@@ -41,9 +41,8 @@ public class FruitEffects : MonoBehaviour
 
             // Apply the value effect to the child
             FruitSpawn fruitSpawn = transform.GetChild(i).GetComponent<FruitSpawn>();
-            fruitSpawn.effect = colorEffectDict[chosenColor];
+            fruitSpawn.effect = (colorEffectDict[chosenColor] ? 1 : -1) * fruitStressValue;
 
         }
-
     }
 }
