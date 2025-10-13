@@ -41,7 +41,7 @@ public class ConsumableHandler : MonoBehaviour
 
             // Apply the value effect to the child
             FruitSpawn fruitSpawn = transform.GetChild(i).GetComponent<FruitSpawn>();
-            fruitSpawn.effect = (colorEffectDict[chosenColor] ? 1 : -1) * fruitStressValue;
+            fruitSpawn.effect = (colorEffectDict[chosenColor] ? -1 : 1) * fruitStressValue;
 
         }
     }
