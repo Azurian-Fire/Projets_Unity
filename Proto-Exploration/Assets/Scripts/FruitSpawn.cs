@@ -28,7 +28,7 @@ public class FruitSpawn : MonoBehaviour, IInteractable
 
     Color GetFittingColor()
     {
-        Color currentTreeColor = transform.GetChild(1).GetComponent<Renderer>().material.color;
+        Color currentTreeColor = transform.GetComponent<Renderer>().material.color;
         return currentTreeColor;
     }
 }

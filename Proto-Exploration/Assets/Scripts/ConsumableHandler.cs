@@ -36,7 +36,7 @@ public class ConsumableHandler : MonoBehaviour
             //childMaterials[i] = transform.GetChild(i).GetChild(0).GetComponent<Renderer>().material;
             //childMaterials[i].color = chosenColor;
 
-            childMaterials[i] = transform.GetChild(i).GetChild(1).GetComponent<Renderer>().material;
+            childMaterials[i] = transform.GetChild(i).GetComponent<Renderer>().material;
             childMaterials[i].color = chosenColor;
 
             // Apply the value effect to the child
