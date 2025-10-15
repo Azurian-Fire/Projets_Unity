@@ -5,7 +5,7 @@ public abstract class InteractableEntity : MonoBehaviour
     public int incrementCount;
 
     public int totalStressValue;
-    public int interactDuration;
+    public float interactDuration;
 
 
     private string entityType;

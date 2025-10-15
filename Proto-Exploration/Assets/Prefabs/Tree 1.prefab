@@ -123,7 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incrementCount: 1
   totalStressValue: 0
-  interactDuration: 0
+  interactDuration: 0.1
   fruitPrefab: {fileID: 1734507326562128720, guid: b7f001faf05f0c840a0e88505e4ccdc7, type: 3}
   spawnData: {fileID: 11400000, guid: 30ed72d69f61804429dc459dd9b9a24b, type: 2}
-  effect: 0

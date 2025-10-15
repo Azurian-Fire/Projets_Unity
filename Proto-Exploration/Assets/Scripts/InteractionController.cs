@@ -33,7 +33,8 @@ public class InteractionController : MonoBehaviour
             return;
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(playerTransform.position, playerTransform.position + playerTransform.forward * interactDistance);
+        Gizmos.DrawLine(playerTransform.position,
+            playerTransform.position + playerTransform.forward * interactDistance);
     }
 
     void UpdateCurrentInteractable()
@@ -43,13 +44,23 @@ public class InteractionController : MonoBehaviour
         Physics.Raycast(ray, out RaycastHit hitInfo, interactDistance);
         if (hitInfo.collider == null)
         {
+            currentInteractable = null;
             return;
         }
+
+        // if (!hitInfo.collider.GetComponent<InteractableEntity>())
+        // {
+        //     return;
+        // }
+
         if (hitInfo.collider.GetComponent<InteractableEntity>() != currentInteractable)
         {
             currentInteractable = hitInfo.collider?.GetComponent<InteractableEntity>();
-            Debug.Log(currentInteractable);
+            Debug.Log($"currentInteractable {currentInteractable}");
+            Debug.Log($"totalStressValue {currentInteractable.totalStressValue}");
+            Debug.Log($"incrementCount {currentInteractable.incrementCount}");
             stressIncrement = currentInteractable.totalStressValue / currentInteractable.incrementCount;
+            Debug.Log($"stressIncrement {stressIncrement}");
         }
     }
 
@@ -66,7 +77,6 @@ public class InteractionController : MonoBehaviour
 
     void CheckForInteractionInput()
     {
-
         if (currentInteractable == null)
         {
             return;
@@ -86,9 +96,10 @@ public class InteractionController : MonoBehaviour
             currentInteractable.Interact(stressToAdd);
             return;
         }
+
         if (currentIncrementTimer >= currentInteractable.interactDuration)
         {
-            currentInteractable.GetInteractMessage();
+            currentInteractable.Interact(currentInteractable.totalStressValue);
             currentIncrementTimer = 0;
             return;
         }

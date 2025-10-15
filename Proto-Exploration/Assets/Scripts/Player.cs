@@ -28,34 +28,31 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        healthBarUI.SetMaxHealth(0f);
+        SetHealth(0);
     }
 
     private void Update()
     {
         if (Keyboard.current.lKey.wasPressedThisFrame)
         {
-            SetHealth(-10f);
             ChangeStress(-10);
         }
         if (Keyboard.current.kKey.wasPressedThisFrame)
         {
-            SetHealth(10f);
             ChangeStress(10);
         }
     }
 
     public void SetHealth(float healthChange)
     {
-        health += healthChange;
-        health = Mathf.Clamp(health, 0, maxHealth);
-
-        healthBarUI.SetHealth(health);
+        health = Mathf.Clamp(healthChange, 0, maxHealth);
+        healthBarUI.SetHealthUI(health);
     }
 
     public void ChangeStress(int stressDelta)
     {
         health = Mathf.Clamp(health + stressDelta, 0, maxHealth);
+        SetHealth(health);
         currentHealthText.text = health.ToString();
     }
 }

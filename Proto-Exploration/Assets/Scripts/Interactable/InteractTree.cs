@@ -5,7 +5,6 @@ public class InteractTree : InteractableEntity
     [SerializeField] GameObject fruitPrefab;
     [SerializeField] FruitSpawnData spawnData;
     Color fittingColor;
-    public int effect;
 
 
     public override string GetInteractMessage()
@@ -27,7 +26,7 @@ public class InteractTree : InteractableEntity
         GameObject fruit = Instantiate(fruitPrefab, randomStartingPos, Quaternion.identity);
         fruit.transform.GetChild(0).GetComponent<Renderer>().material.color = GetFittingColor();
         Rigidbody fruitRb = fruit.GetComponent<Rigidbody>();
-        fruit.GetComponent<InteractFruit>().stressEffect = effect;
+        fruit.GetComponent<InteractFruit>().stressEffect = totalStressValue;
         fruitRb.AddTorque(randomStartingPos.normalized * spawnData.randomThrowStrength, ForceMode.Impulse);
     }
 

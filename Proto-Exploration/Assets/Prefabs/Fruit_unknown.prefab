@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee620a8bfcec2fe4a9b177923f7d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incrementCount: 0
+  incrementCount: 1
   totalStressValue: 0
-  interactDuration: 0
+  interactDuration: 0.1
   message: Press E to eat fruit
   stressEffect: 0
 --- !u!1 &2741576123681626551

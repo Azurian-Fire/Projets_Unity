@@ -40,8 +40,8 @@ public class ConsumableHandler : MonoBehaviour
             childMaterials[i].color = chosenColor;
 
             // Apply the value effect to the child
-            InteractTree fruitSpawn = transform.GetChild(i).GetComponent<InteractTree>();
-            fruitSpawn.effect = (colorEffectDict[chosenColor] ? -1 : 1) * fruitStressValue;
+            InteractTree interactTree = transform.GetChild(i).GetComponent<InteractTree>();
+            interactTree.totalStressValue = (colorEffectDict[chosenColor] ? -1 : 1) * fruitStressValue;
 
         }
     }

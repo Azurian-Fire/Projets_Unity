@@ -2219,18 +2219,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.04993419, y: 0.049934182, z: 0.07382811}
   m_Center: {x: 0.000000029802322, y: 0.000000048428774, z: 0.03688262}
---- !u!114 &1157761760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157761757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec3ee6b156b1b342862d814c48010e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1245695984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2678,9 +2666,6 @@ PrefabInstance:
       addedObject: {fileID: 1014591728}
     - targetCorrespondingSourceObject: {fileID: 6864068802537980651, guid: ba9212102c0af4e4583594a752ea80a5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1157761760}
-    - targetCorrespondingSourceObject: {fileID: 6864068802537980651, guid: ba9212102c0af4e4583594a752ea80a5, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1157761759}
   m_SourcePrefab: {fileID: 100100000, guid: ba9212102c0af4e4583594a752ea80a5, type: 3}
 --- !u!1 &1493085924
@@ -2848,7 +2833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1483, y: -959}
+  m_AnchoredPosition: {x: 1483, y: -720}
   m_SizeDelta: {x: -3640, y: -2110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1563082986
@@ -3602,6 +3587,10 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 3362843279771695948, guid: 5e9f76bf25395934b8e2dfa2562df241, type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3362843279771695948, guid: 5e9f76bf25395934b8e2dfa2562df241, type: 3}
       propertyPath: healthBarUI
       value: 

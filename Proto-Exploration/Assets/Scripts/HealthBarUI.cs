@@ -14,7 +14,7 @@ public class HealthBarUI : MonoBehaviour
         maxHealth = maxH;
     }
 
-    public void SetHealth(float h)
+    public void SetHealthUI(float h)
     {
         health = h;
         float newWidth = (health / maxHealth) * width;
