@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1708659546605012332}
   - component: {fileID: 2313085884279802569}
   - component: {fileID: 575699970408529411}
-  - component: {fileID: 6979933801344595087}
   - component: {fileID: 427573475856145295}
+  - component: {fileID: 5134986057390750234}
   m_Layer: 0
   m_Name: Tree 1
   m_TagString: Untagged
@@ -88,22 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6979933801344595087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089019739803787222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec3ee6b156b1b342862d814c48010e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruitPrefab: {fileID: 1734507326562128720, guid: b7f001faf05f0c840a0e88505e4ccdc7, type: 3}
-  spawnData: {fileID: 11400000, guid: 30ed72d69f61804429dc459dd9b9a24b, type: 2}
-  effect: 0
-  message: Press E to spawn fruit
 --- !u!65 &427573475856145295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,3 +109,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.04993419, y: 0.049934182, z: 0.07382811}
   m_Center: {x: 0.000000029802322, y: 0.000000048428774, z: 0.03688262}
+--- !u!114 &5134986057390750234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089019739803787222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564d9bba2b8b65b47bb6092b9d9290d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incrementCount: 1
+  totalStressValue: 0
+  interactDuration: 0
+  fruitPrefab: {fileID: 1734507326562128720, guid: b7f001faf05f0c840a0e88505e4ccdc7, type: 3}
+  spawnData: {fileID: 11400000, guid: 30ed72d69f61804429dc459dd9b9a24b, type: 2}
+  effect: 0

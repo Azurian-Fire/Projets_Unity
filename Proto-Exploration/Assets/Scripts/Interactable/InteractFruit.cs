@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
-public class FruitEffect : MonoBehaviour, IInteractable
+public class InteractFruit : InteractableEntity
 {
     public static event Action<int> OnFruitEaten;
     public string interactMessage => message;
@@ -10,26 +10,17 @@ public class FruitEffect : MonoBehaviour, IInteractable
 
     public int stressEffect;
 
-    public void Interact()
+    public override string GetInteractMessage()
     {
-        EatFruit();
+        string message = base.GetInteractMessage();
+        return message;
     }
 
-    void Start()
+    public override void Interact(int stressChange)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void EatFruit()
-    {
-        Debug.Log($"You ate the fruit! Stress effect: {stressEffect}");
+        Debug.Log($"You ate the fruit! Stress effect: {stressChange}");
         OnFruitEaten?.Invoke(stressEffect);
         Destroy(gameObject);
     }
+
 }

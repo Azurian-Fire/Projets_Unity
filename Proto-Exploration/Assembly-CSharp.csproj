@@ -62,24 +62,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\InputHandler.cs" />
+    <Compile Include="Assets\Scripts\InteractableEntity.cs" />
     <Compile Include="Assets\ScriptableObjects\RoamerEntityData.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\IdleState.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\ChaseState.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\RoamerStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Interactable\InteractTree.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\RoamerEntity.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\BasicRoamerState.cs" />
-    <Compile Include="Assets\Scripts\IInteractable.cs" />
-    <Compile Include="Assets\Scripts\Consumables\FruitEffect.cs" />
     <Compile Include="Assets\Scripts\HealthBarUI.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Interactable\InteractFruit.cs" />
     <Compile Include="Assets\Scripts\TreeColouring.cs" />
     <Compile Include="Assets\Scripts\InteractionController.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\RoamingState.cs" />
     <Compile Include="Assets\Scripts\ConsumableHandler.cs" />
-    <Compile Include="Assets\Scripts\FruitSpawn.cs" />
     <Compile Include="Assets\ScriptableObjects\FruitSpawnData.cs" />
   </ItemGroup>
   <ItemGroup>

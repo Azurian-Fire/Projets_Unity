@@ -12,7 +12,11 @@ public class InteractionController : MonoBehaviour
     [SerializeField] TextMeshProUGUI interactText;
     [SerializeField] float interactDistance = 5f;
 
-    IInteractable currentInteractable;
+    InteractableEntity currentInteractable;
+
+    private float currentIncrementTimer;
+    private float maxIncrementTimer;
+    private float stressIncrement;
 
     public void Update()
     {
@@ -41,10 +45,11 @@ public class InteractionController : MonoBehaviour
         {
             return;
         }
-        if (hitInfo.collider.GetComponent<IInteractable>() != currentInteractable)
+        if (hitInfo.collider.GetComponent<InteractableEntity>() != currentInteractable)
         {
-            currentInteractable = hitInfo.collider?.GetComponent<IInteractable>();
+            currentInteractable = hitInfo.collider?.GetComponent<InteractableEntity>();
             Debug.Log(currentInteractable);
+            stressIncrement = currentInteractable.totalStressValue / currentInteractable.incrementCount;
         }
     }
 
@@ -56,14 +61,36 @@ public class InteractionController : MonoBehaviour
             return;
         }
 
-        interactText.text = currentInteractable.interactMessage;
+        interactText.text = currentInteractable.GetInteractMessage();
     }
 
     void CheckForInteractionInput()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame && currentInteractable != null)
+
+        if (currentInteractable == null)
         {
-            currentInteractable.Interact();
+            return;
+        }
+
+        if (Keyboard.current.eKey.isPressed)
+        {
+            currentIncrementTimer += Time.deltaTime;
+        }
+
+        if (Keyboard.current.eKey.wasReleasedThisFrame)
+        {
+            float incrementDuration = maxIncrementTimer / currentInteractable.incrementCount;
+            int reachedIncrement = (int)Mathf.Floor(currentIncrementTimer / incrementDuration);
+            int stressToAdd = (int)Mathf.Floor(stressIncrement * reachedIncrement);
+            Debug.Log($"Stress to add: {stressToAdd}");
+            currentInteractable.Interact(stressToAdd);
+            return;
+        }
+        if (currentIncrementTimer >= currentInteractable.interactDuration)
+        {
+            currentInteractable.GetInteractMessage();
+            currentIncrementTimer = 0;
+            return;
         }
     }
 }

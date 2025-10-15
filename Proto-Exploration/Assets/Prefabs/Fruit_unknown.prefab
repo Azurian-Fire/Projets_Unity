@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3630071467057499094}
   - component: {fileID: -2641225955675443827}
   - component: {fileID: 7104087810582377737}
-  - component: {fileID: -1590691924425597110}
+  - component: {fileID: 3478975234833417494}
   m_Layer: 0
   m_Name: Fruit_unknown
   m_TagString: Untagged
@@ -86,7 +86,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.26983875, y: 0.2811689, z: 0.28260785}
   m_Center: {x: -0.0015068948, y: 0.00586839, z: -0.0015449524}
---- !u!114 &-1590691924425597110
+--- !u!114 &3478975234833417494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,9 +95,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1734507326562128720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d97d334edb77e439f18fb9fddefdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: ee620a8bfcec2fe4a9b177923f7d4080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  incrementCount: 0
+  totalStressValue: 0
+  interactDuration: 0
   message: Press E to eat fruit
   stressEffect: 0
 --- !u!1 &2741576123681626551

@@ -1,16 +1,21 @@
 using UnityEngine;
 
-public class FruitSpawn : MonoBehaviour, IInteractable
+public class InteractTree : InteractableEntity
 {
     [SerializeField] GameObject fruitPrefab;
     [SerializeField] FruitSpawnData spawnData;
     Color fittingColor;
     public int effect;
 
-    public string interactMessage => message;
-    [SerializeField] string message = "Press E to spawn fruit";
 
-    public void Interact()
+    public override string GetInteractMessage()
+    {
+        //Todo: add timer, effect in 1 increment
+        string message = base.GetInteractMessage();
+        return message;
+    }
+
+    public override void Interact(int stressChange)
     {
         Spawn();
     }
@@ -22,7 +27,7 @@ public class FruitSpawn : MonoBehaviour, IInteractable
         GameObject fruit = Instantiate(fruitPrefab, randomStartingPos, Quaternion.identity);
         fruit.transform.GetChild(0).GetComponent<Renderer>().material.color = GetFittingColor();
         Rigidbody fruitRb = fruit.GetComponent<Rigidbody>();
-        fruit.GetComponent<FruitEffect>().stressEffect = effect;
+        fruit.GetComponent<InteractFruit>().stressEffect = effect;
         fruitRb.AddTorque(randomStartingPos.normalized * spawnData.randomThrowStrength, ForceMode.Impulse);
     }
 

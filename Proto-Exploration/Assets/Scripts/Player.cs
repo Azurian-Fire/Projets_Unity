@@ -13,12 +13,12 @@ public class Player : MonoBehaviour
 
     private void OnEnable()
     {
-        FruitEffect.OnFruitEaten += HandleFruitEaten;
+        InteractFruit.OnFruitEaten += HandleFruitEaten;
     }
 
     private void OnDisable()
     {
-        FruitEffect.OnFruitEaten -= HandleFruitEaten;
+        InteractFruit.OnFruitEaten -= HandleFruitEaten;
     }
 
     private void HandleFruitEaten(int fruitEffect)
