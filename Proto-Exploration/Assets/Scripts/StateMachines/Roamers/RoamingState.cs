@@ -21,7 +21,7 @@ public class RoamingState : BasicRoamerState
         roamerEntity.SetMovementSpeed(roamerEntity.entityData.roamingMovementSpeed);
         roamTimer = 0f;
         roamDirection = Random.insideUnitCircle.normalized;
-        Debug.Log($"{roamerEntity.name} starts Roaming");
+        //Debug.Log($"{roamerEntity.name} starts Roaming");
         roamerEntity.MoveTowards(transform.position + new Vector3(roamDirection.x,0, roamDirection.y) * roamerEntity.entityData.roamingMovementSpeed * currentRoamingDuration);
     }
 
@@ -44,6 +44,6 @@ public class RoamingState : BasicRoamerState
 
     public override void Exit()
     {
-        Debug.Log($"{roamerEntity.name} stops Roaming");
+        //Debug.Log($"{roamerEntity.name} stops Roaming");
     }
 }

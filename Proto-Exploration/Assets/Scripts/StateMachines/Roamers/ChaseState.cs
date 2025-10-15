@@ -17,7 +17,7 @@ public class ChaseState : BasicRoamerState
     }
     public override void Enter()
     {
-        Debug.Log($"{roamerEntity.name} starts Chasing {roamerEntity.target?.name}");
+        //Debug.Log($"{roamerEntity.name} starts Chasing {roamerEntity.target?.name}");
         chaseTimer = 0f;
         currentScanIntervalTimer = 0f;
         roamerEntity.SetMovementSpeed(roamerEntity.entityData.chaseMovementSpeed);
@@ -45,7 +45,7 @@ public class ChaseState : BasicRoamerState
 
     public override void Exit()
     {
-        Debug.Log($"{roamerEntity.name} stops Chasing");
+        //Debug.Log($"{roamerEntity.name} stops Chasing");
     }
 
     private void UpdateLastKnownTargetPosition()
@@ -54,7 +54,7 @@ public class ChaseState : BasicRoamerState
         {
             chaseTimer = 0f;
             lastKnownTargetPosition = roamerEntity.target.position;
-            Debug.Log($"SCANNING AND FOUND AT {lastKnownTargetPosition}");
+            //Debug.Log($"SCANNING AND FOUND AT {lastKnownTargetPosition}");
             Vector3 offsetPosition = GetRandomOffsetPosition(lastKnownTargetPosition);
             roamerEntity.MoveTowards(offsetPosition);
         }

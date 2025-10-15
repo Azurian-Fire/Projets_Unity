@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\StateMachines\Roamers\IdleState.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\ChaseState.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\RoamerStateMachine.cs" />
+    <Compile Include="Assets\ScriptableObjects\WardenSpawnData.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\RoamerEntity.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\BasicRoamerState.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\InteractionController.cs" />
     <Compile Include="Assets\Scripts\StateMachines\Roamers\RoamingState.cs" />
     <Compile Include="Assets\Scripts\ConsumableHandler.cs" />
+    <Compile Include="Assets\Scripts\WardenHandler.cs" />
     <Compile Include="Assets\Scripts\FruitSpawn.cs" />
     <Compile Include="Assets\ScriptableObjects\FruitSpawnData.cs" />
   </ItemGroup>

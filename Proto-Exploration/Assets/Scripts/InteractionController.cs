@@ -44,7 +44,7 @@ public class InteractionController : MonoBehaviour
         if (hitInfo.collider.GetComponent<IInteractable>() != currentInteractable)
         {
             currentInteractable = hitInfo.collider?.GetComponent<IInteractable>();
-            Debug.Log(currentInteractable);
+            //Debug.Log(currentInteractable);
         }
     }
 

@@ -12,7 +12,7 @@ public class FruitEffect : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        EatFruit();
+        EatFruit(1);
     }
 
     void Start()
@@ -26,7 +26,7 @@ public class FruitEffect : MonoBehaviour, IInteractable
         
     }
 
-    void EatFruit()
+    void EatFruit(float stressChange)
     {
         Debug.Log($"You ate the fruit! Stress effect: {stressEffect}");
         OnFruitEaten?.Invoke(stressEffect);
