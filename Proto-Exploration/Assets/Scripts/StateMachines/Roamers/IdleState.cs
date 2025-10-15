@@ -20,7 +20,7 @@ public class IdleState : BasicRoamerState
         roamerAgent.isStopped = true;
         roamerAgent.ResetPath();
         idleTimer = 0f;
-        Debug.Log($"{roamerEntity.name} enters Idle with a duration of {currentIdleDuration}");
+        //Debug.Log($"{roamerEntity.name} enters Idle with a duration of {currentIdleDuration}");
     }
 
     public override void Tick()
@@ -43,6 +43,6 @@ public class IdleState : BasicRoamerState
 
     public override void Exit()
     {
-        Debug.Log($"{roamerEntity.name} exits Idle");
+        //Debug.Log($"{roamerEntity.name} exits Idle");
     }
 }
