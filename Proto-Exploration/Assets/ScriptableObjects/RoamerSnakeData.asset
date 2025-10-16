@@ -16,10 +16,10 @@ MonoBehaviour:
   stressHitDamage: 5
   averageIdleDuration: 2
   idleDurationDelta: 0.2
-  roamingMovementSpeed: 1.5
+  roamingMovementSpeed: 3
   averageRoamingDuration: 3
   roamingDurationDelta: 0.1
-  chaseMovementSpeed: 2
+  chaseMovementSpeed: 5
   chaseScanIntervalTimer: 0.5
   chaseOffsetRadius: 1
   aggroRangeRadius: 10

@@ -32,7 +32,7 @@ public class InteractTree : InteractableEntity
             transform.position.y + spawnData.verticalOffset, transform.position.z + randomOffset.y);
         
         GameObject fruit = Instantiate(fruitPrefab, randomStartingPos, Quaternion.identity);
-        fruit.transform.GetChild(0).GetComponent<Renderer>().material.color = fittingColor;
+        fruit.transform.GetComponent<Renderer>().material.color = fittingColor;
         fruit.GetComponent<InteractFruit>().totalStressValue = totalStressValue;
         Rigidbody fruitRb = fruit.GetComponent<Rigidbody>();
         fruitRb.AddTorque(randomStartingPos.normalized * spawnData.randomThrowStrength, ForceMode.Impulse);

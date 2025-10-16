@@ -8,7 +8,7 @@ public class WardenHandler : MonoBehaviour
 
     void Awake()
     {
-        GetComponent<SphereCollider>().radius = wardenData.triggerSpawnRadius / transform.localScale.x;
+        GetComponent<SphereCollider>().radius = wardenData.triggerSpawnRadius;
         IsThereAWarden();
     }
 

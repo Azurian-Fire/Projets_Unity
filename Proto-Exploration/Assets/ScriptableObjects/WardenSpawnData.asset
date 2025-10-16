@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bf2398a1cd38c4f82124be87240d47, type: 3}
   m_Name: WardenSpawnData
   m_EditorClassIdentifier: 
-  warden: {fileID: 757898835944454061, guid: 589547a55c9cc804487388f6ad2e1216, type: 3}
+  warden: {fileID: 7291119077243089174, guid: 69003b71958c3d145b22c0db580e1b15, type: 3}
   triggerSpawnRadius: 5
   wardenCount: 2
-  spawnChance: 0.8
+  spawnChance: 0.1
