@@ -1,24 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class HealthBarUI : MonoBehaviour
 {
     [SerializeField] private RectTransform healthBar;
+    [SerializeField] TMP_Text currentHealthText;
+    [SerializeField] TMP_Text totalHealthText;
 
-    public float health;
-    public float maxHealth;
-    public float width;
-    public float height;
-
-    public void SetMaxHealth(float maxH)
+    [SerializeField] float width;
+    [SerializeField] float height;
+    
+    public void SetHealthUI(float newHealth, float maxHealth)
     {
-        maxHealth = maxH;
-    }
-
-    public void SetHealthUI(float h)
-    {
-        health = h;
-        float newWidth = (health / maxHealth) * width;
-
+        currentHealthText.text = newHealth.ToString();
+        
+        float newWidth = (newHealth / maxHealth) * width;
         healthBar.sizeDelta = new Vector2(newWidth, height);
     }
 }

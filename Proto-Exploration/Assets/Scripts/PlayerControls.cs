@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -7,9 +8,10 @@ public class PlayerControls : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpHeight = 2f;
     public float gravity = -9.81f;
+    float rotationY;
 
     [Header("Camera")]
-    public Transform cameraTransform;
+    Transform cameraTransform;
     [SerializeField] Vector2 mouseSensitivity;
 
     [Header("References")]
@@ -17,9 +19,7 @@ public class PlayerControls : MonoBehaviour
     PlayerInput playerInput;
     InputAction moveAction;
     InputAction lookAction;
-    [SerializeField] Transform fakeBody;
-
-
+    [SerializeField] Transform orientation;
 
     void Start()
     {
@@ -43,25 +43,28 @@ public class PlayerControls : MonoBehaviour
             TryJump();
         }
     }
-
+    
     private void LateUpdate()
     {
         Vector2 lookInput = lookAction.ReadValue<Vector2>();
-        fakeBody.Rotate(Vector3.right * -lookInput.y * mouseSensitivity.y);
+        if (lookInput == Vector2.zero) return;
+        // orientation.Rotate(Vector3.right * (-lookInput.y * mouseSensitivity.y));
+        
+        // Vector3 camForwardProj =  Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up);
+        orientation.forward = cameraTransform.forward;
     }
-
+    
     private void MovePlayer()
     {
         Vector2 direction = moveAction.ReadValue<Vector2>();
         Vector3 fullMovement = transform.forward * direction.y + transform.right * direction.x;
-        transform.position += fullMovement * moveSpeed * Time.deltaTime;
+        transform.position += fullMovement * (moveSpeed * Time.deltaTime);
     }
 
     private void RotatePlayer()
     {
-        Vector2 lookInput = lookAction.ReadValue<Vector2>();
-        if (lookInput == Vector2.zero) return;
-        transform.Rotate(Vector3.up * lookInput.x * mouseSensitivity.x);
+        Vector3 camForwardProj =  Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up);
+        transform.forward = camForwardProj;
     }
 
     private void TryJump()

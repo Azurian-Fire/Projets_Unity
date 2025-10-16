@@ -19,7 +19,7 @@ public class WardenHandler : MonoBehaviour
         if (isBushInhabited)
         {
             remainingWardenCount = wardenData.wardenCount;
-            Debug.Log($"bush {transform.name} is inhabited");
+            // Debug.Log($"bush {transform.name} is inhabited");
         }
     }
 
