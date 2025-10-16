@@ -6,27 +6,35 @@ public class InteractTree : InteractableEntity
     [SerializeField] FruitSpawnData spawnData;
     Color fittingColor;
 
-
+    private void Start()
+    {
+        fittingColor = GetFittingColor();
+    }
+    
     public override string GetInteractMessage()
     {
-        //Todo: add timer, effect in 1 increment
         string message = base.GetInteractMessage();
         return message;
     }
 
-    public override void Interact(int stressChange)
+    public override void Interact(int succesfullIncrementCount, int stressChange)
     {
-        Spawn();
+        for (int i = 0; i < succesfullIncrementCount; i++)
+        {
+            RandomFruitSpawn();
+        }
     }
 
-    void Spawn()
+    void RandomFruitSpawn()
     {
         Vector2 randomOffset = Random.insideUnitCircle * spawnData.randomSpawnRadius;
-        Vector3 randomStartingPos = new Vector3(transform.position.x + randomOffset.x, transform.position.y + spawnData.verticalOffset, transform.position.z + randomOffset.y);
+        Vector3 randomStartingPos = new Vector3(transform.position.x + randomOffset.x,
+            transform.position.y + spawnData.verticalOffset, transform.position.z + randomOffset.y);
+        
         GameObject fruit = Instantiate(fruitPrefab, randomStartingPos, Quaternion.identity);
-        fruit.transform.GetChild(0).GetComponent<Renderer>().material.color = GetFittingColor();
+        fruit.transform.GetChild(0).GetComponent<Renderer>().material.color = fittingColor;
+        fruit.GetComponent<InteractFruit>().totalStressValue = totalStressValue;
         Rigidbody fruitRb = fruit.GetComponent<Rigidbody>();
-        fruit.GetComponent<InteractFruit>().stressEffect = totalStressValue;
         fruitRb.AddTorque(randomStartingPos.normalized * spawnData.randomThrowStrength, ForceMode.Impulse);
     }
 

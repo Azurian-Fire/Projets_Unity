@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564d9bba2b8b65b47bb6092b9d9290d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incrementCount: 1
+  incrementCount: 2
   totalStressValue: 0
-  interactDuration: 0.1
+  interactDuration: 2
   fruitPrefab: {fileID: 1734507326562128720, guid: b7f001faf05f0c840a0e88505e4ccdc7, type: 3}
   spawnData: {fileID: 11400000, guid: 30ed72d69f61804429dc459dd9b9a24b, type: 2}

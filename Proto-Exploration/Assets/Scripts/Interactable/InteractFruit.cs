@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static UnityEngine.Rendering.DebugUI;
 
 public class InteractFruit : InteractableEntity
@@ -8,18 +9,20 @@ public class InteractFruit : InteractableEntity
     public string interactMessage => message;
     [SerializeField] string message = "Press E to eat fruit";
 
-    public int stressEffect;
-
     public override string GetInteractMessage()
     {
         string message = base.GetInteractMessage();
         return message;
     }
 
-    public override void Interact(int stressChange)
+    public override void Interact(int succesfulfIncrementCount, int stressChange)
     {
+        if (stressChange == 0)
+        {
+            stressChange = totalStressValue;
+        }
         Debug.Log($"You ate the fruit! Stress effect: {stressChange}");
-        OnFruitEaten?.Invoke(stressEffect);
+        OnFruitEaten?.Invoke(totalStressValue);
         Destroy(gameObject);
     }
 

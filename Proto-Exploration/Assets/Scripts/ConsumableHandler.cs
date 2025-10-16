@@ -14,7 +14,7 @@ public class ConsumableHandler : MonoBehaviour
     //if value = 2, fruit is bad
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         childMaterials = new Material[transform.childCount];
         colorEffectDict = new Dictionary<Color, bool>();

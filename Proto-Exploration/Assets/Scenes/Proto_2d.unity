@@ -2763,9 +2763,17 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 3253761463857259684, guid: 5e9f76bf25395934b8e2dfa2562df241, type: 3}
+      propertyPath: interactDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253761463857259684, guid: 5e9f76bf25395934b8e2dfa2562df241, type: 3}
+      propertyPath: playerOrientationTransform
+      value: 
+      objectReference: {fileID: 1001046270}
     - target: {fileID: 3362843279771695948, guid: 5e9f76bf25395934b8e2dfa2562df241, type: 3}
       propertyPath: health
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3362843279771695948, guid: 5e9f76bf25395934b8e2dfa2562df241, type: 3}
       propertyPath: healthBarUI

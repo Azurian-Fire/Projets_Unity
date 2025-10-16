@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   incrementCount: 1
   totalStressValue: 0
-  interactDuration: 0.1
+  interactDuration: 1
   message: Press E to eat fruit
   stressEffect: 0
 --- !u!1 &2741576123681626551
