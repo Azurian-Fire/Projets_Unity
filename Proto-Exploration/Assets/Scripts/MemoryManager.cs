@@ -8,7 +8,7 @@ public class MemoryManager : MonoBehaviour
 {
     public static MemoryManager memoryManager { get; private set; }
     [SerializeField] private List<Transform> transformList;
-    private Dictionary<InteractableColorKey, InteractionType> knownInteractables;
+    private static Dictionary<string, InteractionType> knownInteractables;
 
     private void OnEnable()
     {
@@ -30,27 +30,28 @@ public class MemoryManager : MonoBehaviour
             memoryManager = this;
         }
 
-        knownInteractables = new Dictionary<InteractableColorKey, InteractionType>();
+        knownInteractables = new Dictionary<string, InteractionType>();
     }
 
-    private void HandleFruitMemory(int stressChange, InteractableEntity entity)
+    private void HandleFruitMemory(int stressChange, InteractableColorKey interactableColorKey)
     {
-        ProcessInteraction(entity);
+        ProcessInteraction(interactableColorKey);
         // Debug.Log(knownInteractables.Keys.ToList().Count);
         // Debug.Log($"{knownInteractables.Keys.ToList()[0].interactableName} / {knownInteractables.Keys.ToList()[0].color} / {knownInteractables.Values.ToList()[0]}");
         // Debug.Log($"{knownInteractables.Keys.ToList()[knownInteractables.Keys.ToList().Count-1].interactableName} / {knownInteractables.Keys.ToList()[knownInteractables.Values.ToList().Count-1].color} / {knownInteractables.Keys.ToList()[knownInteractables.Values.ToList().Count-1]}");
     }
     
-    public void RememberInteraction(string interactableName, string color, InteractionType interaction)
+    public void RememberInteraction(InteractableColorKey interactableColorKey, InteractionType interaction)
     {
-        InteractableColorKey key = new InteractableColorKey(interactableName, color);
-        knownInteractables[key] = interaction;
+        Debug.Log($"{interactableColorKey.GetInteractableName()} will now be known as {interaction}");
+        knownInteractables[interactableColorKey.GetInteractableName()] = interaction;
+        Debug.Log(interactableColorKey.GetInteractableName());
+        Debug.Log(knownInteractables[interactableColorKey.GetInteractableName()]);
     }
 
-    public InteractionType GetMemory(string interactableName, string color)
+    public static InteractionType GetMemory(string interactableColorKeyName)
     {
-        InteractableColorKey key = new InteractableColorKey(interactableName, color);
-        if (knownInteractables.TryGetValue(key, out InteractionType interaction))
+        if (knownInteractables.TryGetValue(interactableColorKeyName, out InteractionType interaction))
         {
             return interaction;
         }
@@ -58,11 +59,10 @@ public class MemoryManager : MonoBehaviour
         return InteractionType.Neutral;
     }
 
-    private void ProcessInteraction(InteractableEntity interactableEntity)
+    private void ProcessInteraction(InteractableColorKey interactableColorKey)
     {
         InteractionType interactionType;
-        string interactableName = Enum.GetName(typeof(InteractableType), interactableEntity.interactableType);
-        int interactionValue = interactableEntity.totalStressValue;
+        int interactionValue = interactableColorKey.interactableEntity.totalStressValue;
 
         if (interactionValue > 0)
         {
@@ -77,6 +77,6 @@ public class MemoryManager : MonoBehaviour
             interactionType = InteractionType.Neutral;
         }
 
-        RememberInteraction(interactableName, interactableEntity.colorName, interactionType);
+        RememberInteraction(interactableColorKey, interactionType);
     }
 }

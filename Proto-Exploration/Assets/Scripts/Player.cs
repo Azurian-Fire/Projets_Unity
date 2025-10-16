@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
         InteractFruit.OnFruitEaten -= HandleFruitEaten;
     }
 
-    private void HandleFruitEaten(int fruitEffect, InteractableEntity entity = null)
+    private void HandleFruitEaten(int fruitEffect, InteractableColorKey interactableColorKey)
     {
         ChangeHealth(fruitEffect);
     }
