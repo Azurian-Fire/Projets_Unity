@@ -9,21 +9,23 @@ public class ChaseState : BasicRoamerState
 
     private float stressAuraDmg;
     private float stressHitDmg;
-    
+
     private float currentScanIntervalTimer;
     private float scanIntervalTimer;
     private float offsetRadius;
     private Vector3 lastKnownTargetPosition;
+
     public override void Initialize(RoamerStateMachine sm)
     {
         base.Initialize(sm);
         scanIntervalTimer = roamerEntity.entityData.chaseScanIntervalTimer;
-        
+
         chaseDuration = roamerEntity.entityData.deaggroTime;
         offsetRadius = roamerEntity.entityData.chaseOffsetRadius;
         stressAuraDmg = roamerEntity.entityData.stressAuraDamage;
         stressHitDmg = roamerEntity.entityData.stressHitDamage;
     }
+
     public override void Enter()
     {
         //Debug.Log($"{roamerEntity.name} starts Chasing {roamerEntity.target?.name}");
@@ -35,7 +37,7 @@ public class ChaseState : BasicRoamerState
     public override void Tick()
     {
         currentScanIntervalTimer += Time.deltaTime;
-        HandleAttack();
+
         if (currentScanIntervalTimer >= scanIntervalTimer)
         {
             UpdateLastKnownTargetPosition();
@@ -50,6 +52,10 @@ public class ChaseState : BasicRoamerState
             {
                 roamerStateMachine.ChangeState(GetComponent<IdleState>());
             }
+        }
+        else
+        {
+            HandleAttack();
         }
     }
 
@@ -87,6 +93,7 @@ public class ChaseState : BasicRoamerState
             roamerEntity.MoveTowards(offsetPosition);
         }
     }
+
     private Vector3 GetRandomOffsetPosition(Vector3 targetPosition)
     {
         Vector2 randomOffset = Random.insideUnitCircle * offsetRadius;
@@ -99,28 +106,32 @@ public class ChaseState : BasicRoamerState
         {
             return;
         }
+
         currentAuraTimer = 0f;
-    }    
+    }
+
     void OnTriggerStay(Collider other)
     {
         if (!other.CompareTag("Player"))
         {
             return;
         }
+
         currentAuraTimer += Time.deltaTime;
         if (currentAuraTimer >= roamerEntity.entityData.stressAuraTimer)
         {
             other.GetComponent<Player>().ChangeHealth(stressAuraDmg);
             currentAuraTimer = 0f;
         }
-    }    
+    }
+
     void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player"))
         {
             return;
         }
+
         currentAuraTimer = 0f;
     }
-
 }

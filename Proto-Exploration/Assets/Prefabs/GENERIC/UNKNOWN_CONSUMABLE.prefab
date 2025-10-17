@@ -373,7 +373,6 @@ MonoBehaviour:
   interactDuration: 1
   interactableType: 4
   message: Press E to use item
-  DEBUGEFFECT: 
 --- !u!54 &-4360308392539142014
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5181,7 +5180,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 90e28864b6d028e4ab5823044e716612, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10014,7 +10013,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e4e0f491807529e4daaed1229c0e92e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
