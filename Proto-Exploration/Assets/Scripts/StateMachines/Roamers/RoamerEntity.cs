@@ -13,6 +13,13 @@ public class RoamerEntity : MonoBehaviour
     protected NavMeshAgent agent;
     protected SphereCollider aggroCollider;
 
+
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, entityData.attackRange);
+    }
     protected virtual void Awake()
     {
         stateMachine = GetComponent<RoamerStateMachine>();

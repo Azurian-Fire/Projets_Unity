@@ -15,4 +15,4 @@ MonoBehaviour:
   warden: {fileID: 7291119077243089174, guid: 69003b71958c3d145b22c0db580e1b15, type: 3}
   triggerSpawnRadius: 5
   wardenCount: 2
-  spawnChance: 0.1
+  spawnChance: 0.2
