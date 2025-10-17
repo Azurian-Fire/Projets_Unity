@@ -8,14 +8,19 @@ public class InteractionController : MonoBehaviour
     [SerializeField] TextMeshProUGUI interactText;
     [SerializeField] float interactDistance = 5f;
     [SerializeField] Transform playerOrientationTransform;
+    [SerializeField] InteractBarUI interactBarUI;
 
     InteractableEntity currentInteractable;
 
     private bool stillOnLastInteraction;
-    
+
     private float currentIncrementTimer;
     private float maxIncrementTimer;
     private float stressIncrement;
+    private float incrementDuration;
+
+    private float interactBarCompletion;
+    private int reachedIncrement;
 
     private void Update()
     {
@@ -56,6 +61,8 @@ public class InteractionController : MonoBehaviour
         if (interactableCandidate != currentInteractable)
         {
             currentInteractable = interactableCandidate;
+            maxIncrementTimer = currentInteractable.interactDuration;
+            incrementDuration = maxIncrementTimer / currentInteractable.incrementCount;
             stressIncrement = currentInteractable.totalStressValue / currentInteractable.incrementCount;
         }
     }
@@ -71,6 +78,14 @@ public class InteractionController : MonoBehaviour
         interactText.text = currentInteractable.GetInteractMessage();
     }
 
+    void UpdateInteractBar(float completionTime)
+    {
+        float newCompletion = completionTime / incrementDuration;
+        // newCompletion = Mathf.Clamp(newCompletion, 0, 1);
+        // Debug.Log(newCompletion);
+        interactBarUI.SetInteractUI(newCompletion);
+    }
+
     void HandleInteractionInput()
     {
         if (currentInteractable == null)
@@ -78,30 +93,38 @@ public class InteractionController : MonoBehaviour
             return;
         }
 
+
         if (Keyboard.current.eKey.isPressed && !stillOnLastInteraction)
         {
             currentIncrementTimer += Time.deltaTime;
+            if (currentIncrementTimer >= incrementDuration)
+            {
+                currentIncrementTimer = currentIncrementTimer % incrementDuration;
+                reachedIncrement++;
+            }
+
+            // reachedIncrement = (int)Mathf.Floor(currentIncrementTimer / incrementDuration);
+            UpdateInteractBar(currentIncrementTimer);
         }
 
-        if (currentIncrementTimer >= currentInteractable.interactDuration)
+        if (reachedIncrement == currentInteractable.incrementCount && !stillOnLastInteraction)
         {
-            currentInteractable.Interact(currentInteractable.incrementCount);
+            currentInteractable.Interact(reachedIncrement);
             currentIncrementTimer = 0;
             stillOnLastInteraction = true;
             return;
         }
-        
+
         if (Keyboard.current.eKey.wasReleasedThisFrame)
         {
-
+            UpdateInteractBar(0);
             if (stillOnLastInteraction)
             {
                 stillOnLastInteraction = false;
+                reachedIncrement = 0;
                 return;
             }
 
-            float incrementDuration = maxIncrementTimer / currentInteractable.incrementCount;
-            int reachedIncrement = (int)Mathf.Floor(currentIncrementTimer / incrementDuration);
 
             if (reachedIncrement <= 0)
             {
@@ -112,11 +135,12 @@ public class InteractionController : MonoBehaviour
             }
 
             int stressToAdd = (int)Mathf.Floor(stressIncrement * reachedIncrement);
-            Debug.Log($"Partial interaction, reached increment {reachedIncrement} out of {currentInteractable.incrementCount}");
+            Debug.Log(
+                $"Partial interaction, reached increment {reachedIncrement} out of {currentInteractable.incrementCount}");
             currentIncrementTimer = 0;
             stillOnLastInteraction = false;
             currentInteractable.Interact(reachedIncrement);
-            return;
+            reachedIncrement = 0;
         }
     }
 }
