@@ -58,11 +58,11 @@ public abstract class InteractableEntity : MonoBehaviour
         if (DEBUGEFFECT == null) return;
         if (DEBUGEFFECT == "Negative")
         {
-            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);
         }        
         if (DEBUGEFFECT == "Positive")
         {
-            transform.GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(0).gameObject.SetActive(true);
         }
     }
     
