@@ -1,16 +1,12 @@
 using UnityEngine;
-
+using UnityEngine.ProBuilder;
 public class InteractTree : InteractableEntity
 {
     [SerializeField] GameObject fruitPrefab;
     [SerializeField] FruitSpawnData spawnData;
-    Color fittingColor;
+    [SerializeField] private float randomSpawnCircleRadius;
+    [SerializeField] private float verticalSpawnOffset;
 
-    private void Start()
-    {
-        fittingColor = GetFittingColor();
-    }
-    
     public override string GetInteractMessage()
     {
         string message = base.GetInteractMessage();
@@ -25,22 +21,28 @@ public class InteractTree : InteractableEntity
         }
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position + new Vector3(0,verticalSpawnOffset,0), randomSpawnCircleRadius);
+    }
+
     void RandomFruitSpawn()
     {
-        Vector2 randomOffset = Random.insideUnitCircle * spawnData.randomSpawnRadius;
+        Vector2 randomOffset = Random.insideUnitCircle.normalized * randomSpawnCircleRadius;
         Vector3 randomStartingPos = new Vector3(transform.position.x + randomOffset.x,
-            transform.position.y + spawnData.verticalOffset, transform.position.z + randomOffset.y);
-        
+            transform.position.y + verticalSpawnOffset, transform.position.z + randomOffset.y);
+
         GameObject fruit = Instantiate(fruitPrefab, randomStartingPos, Quaternion.identity);
         fruit.transform.GetComponent<Renderer>().material.color = fittingColor;
         fruit.GetComponent<InteractFruit>().totalStressValue = totalStressValue;
         Rigidbody fruitRb = fruit.GetComponent<Rigidbody>();
-        fruitRb.AddTorque(randomStartingPos.normalized * spawnData.randomThrowStrength, ForceMode.Impulse);
+        fruitRb.AddTorque(randomStartingPos * spawnData.randomThrowStrength/5, ForceMode.Impulse);
     }
 
-    Color GetFittingColor()
+
+    public void SetFruitPrefab(GameObject newPrefab)
     {
-        Color currentTreeColor = transform.GetComponent<Renderer>().material.color;
-        return currentTreeColor;
+        fruitPrefab = newPrefab;
     }
 }

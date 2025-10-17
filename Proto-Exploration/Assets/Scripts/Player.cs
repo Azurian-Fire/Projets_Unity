@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         InteractFruit.OnFruitEaten -= HandleFruitEaten;
     }
 
-    private void HandleFruitEaten(int fruitEffect)
+    private void HandleFruitEaten(int fruitEffect, InteractableColorKey interactableColorKey)
     {
         ChangeHealth(fruitEffect);
     }

@@ -5,9 +5,10 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class InteractFruit : InteractableEntity
 {
-    public static event Action<int> OnFruitEaten;
+    public static event Action<int, InteractableColorKey> OnFruitEaten;
     public string interactMessage => message;
     [SerializeField] string message = "Press E to eat fruit";
+
 
     public override string GetInteractMessage()
     {
@@ -21,9 +22,17 @@ public class InteractFruit : InteractableEntity
         {
             stressChange = totalStressValue;
         }
+
         Debug.Log($"You ate the fruit! Stress effect: {stressChange}");
-        OnFruitEaten?.Invoke(totalStressValue);
+        OnFruitEaten?.Invoke(totalStressValue, GetInteractableColorKeyFRFR());
+        base.Interact(succesfulfIncrementCount, stressChange);
         Destroy(gameObject);
     }
 
+    void Start()
+    {
+        fittingColor = GetFittingColor();
+        SetMainColor(fittingColor);
+        UpdateInteractableMemory();
+    }
 }

@@ -372,6 +372,8 @@ MonoBehaviour:
   interactDuration: 2
   fruitPrefab: {fileID: 4111434426451043519, guid: 42b65b6c7d829f9469bf5e1906cff54f, type: 3}
   spawnData: {fileID: 11400000, guid: 30ed72d69f61804429dc459dd9b9a24b, type: 2}
+  randomSpawnCircleRadius: 3
+  verticalSpawnOffset: 2
 --- !u!114 &4699254720288168312
 MonoBehaviour:
   m_ObjectHideFlags: 0

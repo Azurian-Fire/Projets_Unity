@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a111d7ef0890d64f881336626be6be4, type: 3}
   m_Name: FruitSpawnData
   m_EditorClassIdentifier: 
-  randomSpawnRadius: 2
-  verticalOffset: 2
-  randomThrowStrength: 3
+  randomThrowStrength: 1

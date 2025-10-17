@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d03cad495b58d3d4eb36424956c210d0, type: 3}
   m_Name: RoamerSnakeData
   m_EditorClassIdentifier: 
-  stressAuraDamage: 1
-  stressHitDamage: 5
+  stressAuraTimer: 3
+  stressAuraDamage: 2
+  attackCooldown: 2
+  attackRange: 2
+  stressHitDamage: 10
   averageIdleDuration: 2
   idleDurationDelta: 0.2
   roamingMovementSpeed: 3
