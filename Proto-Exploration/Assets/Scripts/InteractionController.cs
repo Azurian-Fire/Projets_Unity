@@ -36,11 +36,17 @@ public class InteractionController : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(playerOrientationTransform.position,
-            playerOrientationTransform.position + playerOrientationTransform.forward * interactDistance);
+            playerOrientationTransform.position + playerOrientationTransform.forward * interactDistance);        
+        Gizmos.DrawLine(Camera.main.transform.position,
+            Camera.main.transform.position + Camera.main.transform.forward * 3 * interactDistance);
+        Gizmos.color = Color.red;
+        Vector3 fixedCameraVector = Camera.main.transform.position + Camera.main.transform.forward * 3 * interactDistance;
+        Gizmos.DrawLine(playerOrientationTransform.position, fixedCameraVector);
     }
 
     void UpdateCurrentInteractable()
     {
+        Vector3 fixedCameraVector = Camera.main.transform.position + Camera.main.transform.forward * 3 * interactDistance;
         Ray ray = new Ray(playerOrientationTransform.position, playerOrientationTransform.forward);
         bool hitAnObject = Physics.Raycast(ray, out RaycastHit hitInfo, interactDistance);
 
